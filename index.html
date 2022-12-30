@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>States</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Space+Grotesk:wght@300;500&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <main>
+        <section id="Cards">
+            <div id="card1" class="cards">
+                <figure id="logo">
+                    <img src="./imagenes/card-logo.svg" alt="logo">
+                </figure>
+                <p id="cardNumber"></p>
+                <div id="cardBottom">
+                    <p id="cardHolder"></p>
+                    <div id="date">
+                        <span id="monthCard"></span> <span>/</span> <span id="yearCard"></span>
+                    </div>
+                    
+                </div>
+            </div>
+            <div id="card2">
+            <p id="cvcText"></p>
+            </div>
+        </section>
+        <section id="secondContainer">
+            <div id="first">
+                <div id="formDiv">
+                    <section id="form__container">
+                        <form id="form">
+
+                            <label for="">CARDHOLDER NAME</label>
+                            <input type="text" maxlength="20" placeholder="e.g. Janne Apleseed" id="name" class="input">
+                            <label class="errorlabel hidden" id="lblerrorName">Can't be blank</label>
+                            <div>
+                                <label for="">CARD NUMBER</label>
+                            <input type="text"  placeholder="e.g 1234 5678 9123 0000" id="number" class="input">     
+                            <label class="errorlabel hidden correct" id="lblerrorNumber">Can't be blank</label>
+                            <label class="errorFormat errorlabel hidden" id="lblerrorFormat">Wrong format,numbers only</label>
+                            </div>
+                            <div id="info">
+                                <div id="date">
+
+                                    <label for="">EXP.DATE (MM/YY)</label>
+                                     <div id="dateInfo">
+                                       <input type="number" placeholder="MM" id="month" class="input" >
+                                       <input type="number" placeholder="YY" id="year" class="input">
+                                     </div>
+                                </div>
+                                <div id="cvc"> 
+                                    <label for="">CVC</label>
+                                    <input type="number" placeholder="e.g 123" class="input" id="cvcInput">
+                                </div>
+                                
+                            </div>
+                            <div class="labelCvc">
+                                <label class="errorlabel hidden" id="errorDate">Can't be blank</label>
+                                <label class="errorDate errorlabel hidden" id="lblerrorFormat">Wrong format,months only</label>
+                                <label class="errorlabel hidden" id="lblerrorCvc">Can't be blank</label>
+                            </div>
+                            
+                        </form>
+                    </section>    
+                    <div id="Confirm">
+                        <button id="confirmButton" class="button">Confirm</button>
+                    </div>
+                           
+                </div>
+            </div>
+           
+            <div id="second">
+                <div id="icon-complete" class="hidden">
+                    <img src="./imagenes/icon-complete.svg" alt="check">
+                    <h1 id="thanks">THANK YOU!</h1>
+                    <p id="added">We've added your card details</p>
+                    <button id="continueButton" class="button">Continue</button>
+                </div>
+            </div>  
+        </section>
+    </main>
+    
+    <script src="./main.js" type="text/javascript"></script>
+</body>
+</html>
